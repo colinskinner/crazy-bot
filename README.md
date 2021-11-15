@@ -7,3 +7,7 @@ Currently it has a bit of profanity (forgive me future employers), but given tim
 Drop your suggestions in the comment box below...booyah
 
 Nov 14 Update - Bot, CSV, Scraper
+
+To-Do
+• Write interpreter code that filters through plane to figure out what type
+• Put that into different scripts and include hyperlink to wikipedia page
