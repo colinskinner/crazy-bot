@@ -9,7 +9,7 @@ from keep_alive import keep_alive
 client = discord.Client()
 
 
-sad_words = ["sad", "depressed", "unhappy", "angry", "kms", "die", "miserable", "depressing", "kill", "fuck", "shit", "pain"]
+sad_words = ["sad", "depressed", "unhappy", "angry", "kms", "die", "miserable", "depressing", "kill", "fuck", "shit", "pain", "damn"]
 
 starter_encouragements = [
   "Cheer up!",
