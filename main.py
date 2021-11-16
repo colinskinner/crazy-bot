@@ -93,7 +93,7 @@ async def on_message(message):
     encouragements = []
     if "encouragements" in db.keys():
       encouragements = list(db["encouragements"])
-    await message.channel.send("Current list: " + encouragements)
+    await message.channel.send("Current list: [" + ','.join(encouragements) + "]")
 
   if msg.startswith("$responding"): #sets if responding
     if msg == "$responding" or msg == "$responding ":
