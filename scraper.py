@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+import re
+
 
 URL = "https://en.wikipedia.org/wiki/List_of_jet_airliners"
 
@@ -21,7 +23,7 @@ for table in tables:
     for i in range(1, len(rows)):
         tds = rows[i].find_all('td')  #each table cell
 
-        values = [td.text.replace('\n', "") for td in tds]  #adds table cell to a values array
+        values = [re.sub("[\(\[].*?[\)\]]", "", td.text.replace('\n', "").replace(',', "")) for td in tds]  #adds table cell to a values array
 
         df = df.append(pd.Series(values, index=columns),ignore_index=True)  #puts values array into df datastructure under respective column
 
