@@ -9,13 +9,12 @@ from keep_alive import keep_alive
 client = discord.Client()
 
 
-sad_words = ["sad", "depressed", "unhappy", "angry", "kms", "die", "miserable", "depressing", "kill", "fuck", "shit", "pain", "damn"]
+sad_words = ["sad", "depressed", "unhappy", "angry", "miserable", "depressing", "kill", "pain"]
 
 starter_encouragements = [
   "Cheer up!",
   "Hang in there :O",
   "You are a great person / bot!",
-  "shut the fuck up"
 ]
 
 if "responding" not in db.keys():
@@ -25,7 +24,7 @@ def get_quote():
   response = requests.get("https://zenquotes.io/api/random")
   json_data = json.loads(response.text)
   # quote = json_data[0]['q'] + " -" + json_data[0]['a']
-  quote = json_data[0]['q'] + " -some fucker that thought about shit"
+  quote = json_data[0]['q'] + " -some thinker that thought about it"
   return(quote)
 
 def update_encouragements(m):
